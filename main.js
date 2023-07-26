@@ -150,6 +150,9 @@ Define un objeto, mediante una expresión, que tenga dos propiedades: precio y d
 const remera ={
     precio:2500,
     descuento: 15,
-    neto : () => { return remera.precio *remera.descuento/100}
+    neto : (total) => { total= remera.precio *remera.descuento/100
+    return (remera.precio)- total
 }
-console.log(remera.neto())
+}
+
+console.log("el precio de la remera es " + remera.precio +"$ con el descuento del "+remera.descuento +"% sale " + remera.neto()+"$.")
